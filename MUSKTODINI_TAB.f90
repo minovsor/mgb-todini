@@ -182,8 +182,8 @@
         
         !-- FLOODPLAIN
         !BFLP = ATAB3_TOD(3,IC)/DZ/2                        ! two-sided floodplain width = (A/dz)/2
-        !BFLP = MAX( 0.0, (ATAB3_TOD(3,IC) - WETAREA )/DZ)   ! AJUSTE: DESCONTANDO AREA DA CALHA -> VERSAO C PAULO/WALTER
-        BFLP = MAX( 0.0, (ATAB1_TOD(3,IC) - WETAREA )/DZ)   ! MS: 11/ABR/2023 -> LARGURA PLANICIE = [TOTAL - RIO]
+        BFLP = MAX( 0.0, (ATAB3_TOD(3,IC) - WETAREA )/DZ)   ! AJUSTE: DESCONTANDO AREA DA CALHA -> VERSAO C PAULO/WALTER
+        !BFLP = MAX( 0.0, (ATAB1_TOD(3,IC) - WETAREA )/DZ)   ! MS: ABR/2023 -> testing
         PERIM  = BFLP + 2.*DZ
         WETAREA = BFLP*DZ
         RAIOH = WETAREA/PERIM 
@@ -213,8 +213,8 @@
             QTAB2_TOD(K+3,IC) = WETAREA*RAIOH**(2./3.)*KCHN
             
             !-- FLOODPL
-            !BFLP = MAX(0.0, (ATAB3_TOD(K+3,IC) - WETAREA )/DZ )
-            BFLP = MAX(0.0, (ATAB1_TOD(K+3,IC) - WETAREA )/DZ ) ! MS: 11/ABR/2023 -> LARGURA PLANICIE = [TOTAL - RIO]
+            BFLP = MAX(0.0, (ATAB3_TOD(K+3,IC) - WETAREA )/DZ )
+            !BFLP = MAX(0.0, (ATAB1_TOD(K+3,IC) - WETAREA )/DZ ) !! MS: ABR/2023 -> testing
             PERIM  = BFLP + 2.*DZ
             WETAREA = BFLP*DZ
             RAIOH = WETAREA/PERIM 
