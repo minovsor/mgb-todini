@@ -1,2 +1,2 @@
 # mgb-todini
-MGB com método Todini (experimental)
+MGB 2020 + método Todini (experimental)
