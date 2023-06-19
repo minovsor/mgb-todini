@@ -52,7 +52,7 @@
     !    * Walter Collischonn
     !    * Rodrigo Cauduro Dias de Paiva
     !    * Diogo da Costa Buarque
-    !    * Paulo Pontes RÛgenes
+    !    * Paulo Pontes R√≥genes
     !    * Mino  Viana Sorribas
     !    * Fernando Mainardi Fan
     !    * Juan Martin Bravo 
@@ -144,8 +144,8 @@
     enddo
  
     
-        !Loop que calcula a vaz„o nas interconexıes entre minibacias.
-    if (1==0) then !liga conexıes
+        !Loop que calcula a vaz√£o nas interconex√µes entre minibacias.
+    if (1==0) then !liga conex√µes
         CALL flood_pseudo2D
     endif
 

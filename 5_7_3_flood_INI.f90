@@ -52,7 +52,7 @@
     !    * Walter Collischonn
     !    * Rodrigo Cauduro Dias de Paiva
     !    * Diogo da Costa Buarque
-    !    * Paulo Pontes RÛgenes
+    !    * Paulo Pontes R√≥genes
     !    * Mino  Viana Sorribas
     !    * Fernando Mainardi Fan
     !    * Juan Martin Bravo 
@@ -88,7 +88,7 @@ do iC=1,nC
 
         ALFA = (nMan(iC)*(DBLE(BRIO(iC))**(2.0/3.0)))**0.6/((DECL(iC)**0.5)**0.6) !Parameter ALFA: ALFA*(Eq. Manning)^BETA
         BETA = 0.6 !Parameter BETA: ALFA*(Eq. Manning)^BETA
-        Q2fl(iC)=QREF(IC) !primeira vaz„o (base)
+        Q2fl(iC)=QREF(IC) !primeira vaz√£o (base)
         Q2face=QREF(IC)      
         Hfl(iC)=ALFA*(Q2fl(iC)**BETA)/DBLE(BRIO(iC)) + 0.00001
         Yfl(iC)=ZTAB(1,iC)+Hfl(iC)

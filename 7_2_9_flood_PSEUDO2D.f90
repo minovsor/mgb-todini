@@ -57,7 +57,7 @@
     !    * Walter Collischonn
     !    * Rodrigo Cauduro Dias de Paiva
     !    * Diogo da Costa Buarque
-    !    * Paulo Pontes Rógenes
+    !    * Paulo Pontes RÃ³genes
     !    * Mino  Viana Sorribas
     !    * Fernando Mainardi Fan
     !    * Juan Martin Bravo 
@@ -94,33 +94,33 @@
             KCAT=nFACECAT1(iFACE)
             KCAT2=nFACECAT2(iFACE)
             
-            ! Nível de Fundo e Nível da Água da minibacia iC:
+            ! NÃ­vel de Fundo e NÃ­vel da Ãgua da minibacia iC:
             z1=ZTAB(1,KCAT)
             y1=Hfl(KCAT)+z1
             z2=ZTAB(1,KCAT2)
             y2=Hfl(KCAT2)+z2
 
-            ! Cálculo da profundidade de escoamento:
+            ! CÃ¡lculo da profundidade de escoamento:
             hflow=max(y2,y1)-max(z2,z1)
 
-            !Correção de valores negativos
+            !CorreÃ§Ã£o de valores negativos
             hflow=max(hflow,0.0)
             
-            !A rotina DBLE transforma a variável de entrada em um real*8
-            !Média dos dx de IC e ICJUS
+            !A rotina DBLE transforma a variÃ¡vel de entrada em um real*8
+            !MÃ©dia dos dx de IC e ICJUS
             dxflow=DBLE(nFACEDX(iFACE))       !Verificar se precisa de um limitador do dx
             bflow=100.0
             !WIDTH FOR ESPECIFIC CONNECTIONS (E.G. RIVER DEFLUENCES)
             xMan=nMan(iFACE)
            
-            ! Vazão no tempo anterior:
+            ! VazÃ£o no tempo anterior:
             q0=Q2face(iFACE)/bflow ! em m2/s
                     
-            ! Declividade da linha de água:
+            ! Declividade da linha de Ã¡gua:
             Sflow=-(y1-y2)/dxflow
             
                 
-            ! Cálculo da vazão Inercial (por unidade de largura do rio) na face de jusante da minibacia iC:
+            ! CÃ¡lculo da vazÃ£o Inercial (por unidade de largura do rio) na face de jusante da minibacia iC:
             if (hflow>0.0) then
                 q=(q0-(g*dtflood*hflow*Sflow))/(1.+g*dtflood*hflow*xMan*xMan*abs(q0)/(hflow**(10.0/3.0)))
                 q=q*bflow
@@ -128,7 +128,7 @@
                 q=0.0;
             endif
             
-            ! Calcula a nova vazão no próximo intervalo de tempo:
+            ! Calcula a nova vazÃ£o no prÃ³ximo intervalo de tempo:
             Q2face(iFACE)=q ! em m3/s
             Q2viz(KCAT)=Q2viz(KCAT)- Q2face(iFACE)
             Q2viz(KCAT2)=Q2viz(KCAT2)+ Q2face(iFACE)

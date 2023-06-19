@@ -55,17 +55,17 @@
 ! * Walter Collischonn
 ! * Rodrigo Cauduro Dias de Paiva
 ! * Diogo da Costa Buarque
-! * Paulo Pontes RÛgenes
+! * Paulo Pontes R√≥genes
 ! * Mino Viana Sorribas
 ! * Fernando Mainardi Fan
 ! * Juan Martin Bravo
 !
 ! Main References:
 ! COLLISCHONN, W. ; ALLASIA, D. G. ; SILVA, B. C. ; TUCCI, C. E. M. The MGB-IPH model for large-scale rainfall-runoff modelling. Hydrological Sciences Journal, v. 52, p. 878-895, 2007.
-! COLLISCHONN, W., TUCCI, C. E. M. SimulaÁ„o hidrolÛgica de grandes bacias. Revista Brasileira de Recursos HÌdricos, v. 6, n. 2, 2001.
+! COLLISCHONN, W., TUCCI, C. E. M. Simula√ß√£o hidrol√≥gica de grandes bacias. Revista Brasileira de Recursos H√≠dricos, v. 6, n. 2, 2001.
 ! COLLISCHONN, W. Modelagem de Grandes Bacias - ph.d. Thesis. 2001
-! FAN, F. M. ; MELLER, A. ; COLLISCHONN, W. . IncorporaÁ„o de filtro numÈrico de separaÁ„o de escoamento na assimilaÁ„o de dados para previs„o de vazıes utilizando modelagem hidrolÛgica. Revista Brasileira de Recursos HÌdricos, 2015. 
-! PAZ AR, COLLISCHONN W, TUCCI C, CLARKE R, ALLASIA D. Data Assimilation in a Large-scale Distributed Hydrological Model for Medium Range Flow Forecasts. IAHS Press, Wallingford, UK, IAHS Publication, n. 313, p. 471ñ478, 2007.
+! FAN, F. M. ; MELLER, A. ; COLLISCHONN, W. . Incorpora√ß√£o de filtro num√©rico de separa√ß√£o de escoamento na assimila√ß√£o de dados para previs√£o de vaz√µes utilizando modelagem hidrol√≥gica. Revista Brasileira de Recursos H√≠dricos, 2015. 
+! PAZ AR, COLLISCHONN W, TUCCI C, CLARKE R, ALLASIA D. Data Assimilation in a Large-scale Distributed Hydrological Model for Medium Range Flow Forecasts. IAHS Press, Wallingford, UK, IAHS Publication, n. 313, p. 471‚Äì478, 2007.
 !
 !---------------------------------------------------------------------------------
 ! Variables and Parameters:

@@ -52,7 +52,7 @@
     !    * Walter Collischonn
     !    * Rodrigo Cauduro Dias de Paiva
     !    * Diogo da Costa Buarque
-    !    * Paulo Pontes RÛgenes
+    !    * Paulo Pontes R√≥genes
     !    * Mino  Viana Sorribas
     !    * Fernando Mainardi Fan
     !    * Juan Martin Bravo 
@@ -83,7 +83,7 @@
     
     !-------------------------------------------------------------------------------------
     tflood=0.0
-    AFLTUDO(1,IT)=0.0 !inicializa a vari·vel de areas inundadas da bacia
+    AFLTUDO(1,IT)=0.0 !inicializa a vari√°vel de areas inundadas da bacia
  
     do while (tflood<dtflood0)
         call flood_timestep

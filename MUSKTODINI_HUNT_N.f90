@@ -72,7 +72,7 @@
 		end if
     end do
 	
-	!Interpolação do vetor yy entre os valores jlo e jlo+1 -> para yy(:,1:nk)
+	!InterpolaÃ§Ã£o do vetor yy entre os valores jlo e jlo+1 -> para yy(:,1:nk)
 	if(jlo<n)then
 		incjlo = jlo + (1/(xx(jlo+1)-xx(jlo)))*(x-xx(jlo))
 		y(:) = yy(jlo,:) + (yy(jlo+1,:)-yy(jlo,:))*(incjlo-jlo)

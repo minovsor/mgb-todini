@@ -109,7 +109,7 @@
             VTAB_TOD(K+3,IC) = VTAB_TOD(K+2,IC)+VOLINCR
             
             ! XS WET AREA
-            DZ = ZTAB_TOD(K+3,IC) - ZFUNDOFL(IC)   !MS: DESCONFIO DISSO AQUI, POIS WETAREA É INCREMENTAL
+            DZ = ZTAB_TOD(K+3,IC) - ZFUNDOFL(IC)   !MS: DESCONFIO DISSO AQUI, POIS WETAREA Ã‰ INCREMENTAL
             DZ = ZTAB_TOD(K+3,IC) - ZTAB_TOD(K+2,IC) !MS: CORRECAO->PROVAVEL
             ATAB1_TOD(K+3,IC) =  VTAB_TOD(K+3,IC)/DXX                 !TOTAL MEAN WET AREA
             ATAB2_TOD(K+3,IC) =  ATAB2_TOD(K+2,IC)+DZ*BRIO(IC)*1.     !CHANNEL:XS WET AREA BELOW + DZ*B (assuming retangular)
@@ -183,7 +183,7 @@
         !-- FLOODPLAIN
         !BFLP = ATAB3_TOD(3,IC)/DZ/2                        ! two-sided floodplain width = (A/dz)/2
         BFLP = MAX( 0.0, (ATAB3_TOD(3,IC) - WETAREA )/DZ)   ! AJUSTE: DESCONTANDO AREA DA CALHA -> VERSAO C PAULO/WALTER
-        !BFLP = MAX( 0.0, (ATAB1_TOD(3,IC) - WETAREA )/DZ)   ! MS: ABR/2023 -> testing
+        !BFLP = MAX( 0.0, (ATAB1_TOD(3,IC) - WETAREA )/DZ)   ! MS: 11/ABR/2023 -> testing
         PERIM  = BFLP + 2.*DZ
         WETAREA = BFLP*DZ
         RAIOH = WETAREA/PERIM 
@@ -214,7 +214,7 @@
             
             !-- FLOODPL
             BFLP = MAX(0.0, (ATAB3_TOD(K+3,IC) - WETAREA )/DZ )
-            !BFLP = MAX(0.0, (ATAB1_TOD(K+3,IC) - WETAREA )/DZ ) !! MS: ABR/2023 -> testing
+            !BFLP = MAX(0.0, (ATAB1_TOD(K+3,IC) - WETAREA )/DZ ) ! MS: ABR/2023 -> testing
             PERIM  = BFLP + 2.*DZ
             WETAREA = BFLP*DZ
             RAIOH = WETAREA/PERIM 

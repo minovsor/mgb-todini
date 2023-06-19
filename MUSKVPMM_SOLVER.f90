@@ -7,7 +7,7 @@
     ! MINO SORRIBAS: 2023/04/11
     ! 
     ! BASED ON
-    ! PERUMAL M. & PRICE R. (2013)A fully mass conservative variable parameter McCarthy–Muskingum
+    ! PERUMAL M. & PRICE R. (2013)A fully mass conservative variable parameter McCarthyâ€“Muskingum
     ! method: Theory and verification
     ! Journal of Hydrology, 502, 89-102, 2013
     !

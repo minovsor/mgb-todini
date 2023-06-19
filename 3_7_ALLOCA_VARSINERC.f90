@@ -1,5 +1,5 @@
 	SUBROUTINE ALLOCA_VARSINERC(IOP)
-	!SUBROTINA DE ALLOCA«√O DE MEM”RIA DAS VARI¡VEIS PRINCIPAIS
+	!SUBROTINA DE ALLOCA√á√ÉO DE MEM√ìRIA DAS VARI√ÅVEIS PRINCIPAIS
     !---------------------------------------------------------------------------------
     ! ALLOCA_VARSINERC.f90
     !---------------------------------------------------------------------------------
@@ -55,14 +55,14 @@
     ! * Walter Collischonn
     ! * Rodrigo Cauduro Dias de Paiva
     ! * Diogo da Costa Buarque
-    ! * Paulo Pontes RÛgenes
+    ! * Paulo Pontes R√≥genes
     ! * Mino Viana Sorribas
     ! * Fernando Mainardi Fan
     ! * Juan Martin Bravo
     !
     ! Main References:
     ! COLLISCHONN, W. ; ALLASIA, D. G. ; SILVA, B. C. ; TUCCI, C. E. M. The MGB-IPH model for large-scale rainfall-runoff modelling. Hydrological Sciences Journal, v. 52, p. 878-895, 2007.
-    ! COLLISCHONN, W., TUCCI, C. E. M. SimulaÁ„o hidrolÛgica de grandes bacias. Revista Brasileira de Recursos HÌdricos, v. 6, n. 2, 2001.
+    ! COLLISCHONN, W., TUCCI, C. E. M. Simula√ß√£o hidrol√≥gica de grandes bacias. Revista Brasileira de Recursos H√≠dricos, v. 6, n. 2, 2001.
     ! COLLISCHONN, W. Modelagem de Grandes Bacias - ph.d. Thesis. 2001
     !
     !---------------------------------------------------------------------------------
@@ -83,24 +83,24 @@
 
 	ALLOCV_CASE: SELECT CASE (IOP) !VERIFICA SE ALLOCA OU DEALLOCA
 	CASE (0) ! ALLOCA
-		ALLOCATE (HDFLAG(NC))               !CÛdigo para rodar hidrodin‚mico ou inercial
-		ALLOCATE (MINIMONT(NC,10))           !MATRIZ DE LIGA«’ES TOPOLOGICAS PARA PROPAGA«√O MODELO INERCIAL
-		ALLOCATE (NPFL(NC),ZFUNDOFL(NC))    !N˙mero de pontos do arquivo Cota-Area e NÌvel de Fundo da planÌcie
+		ALLOCATE (HDFLAG(NC))               !C√≥digo para rodar hidrodin√¢mico ou inercial
+		ALLOCATE (MINIMONT(NC,10))           !MATRIZ DE LIGA√á√ïES TOPOLOGICAS PARA PROPAGA√á√ÉO MODELO INERCIAL
+		ALLOCATE (NPFL(NC),ZFUNDOFL(NC))    !N√∫mero de pontos do arquivo Cota-Area e N√≠vel de Fundo da plan√≠cie
 		ALLOCATE (ZFL(100,NC))               !COTAS PARA TABELA COTA-AREA DA PLANICIE
-		ALLOCATE (AFL(100,NC))               !¡REAS PARA TABELA COTA-AREA DA PLANICIE
+		ALLOCATE (AFL(100,NC))               !√ÅREAS PARA TABELA COTA-AREA DA PLANICIE
 		ALLOCATE (HRIO(NC))                 !PROFUNDAIDE DE CALHA CHEIA DO RIO
 		ALLOCATE (ZTAB(102,NC),VTAB(102,NC))  !COTAS E VOLUMES PARA TABELA COTA-VOLUME
 		ALLOCATE (ATAB(102,NC))
 		ALLOCATE (dtfloodIC(NC))            !Intervalo de tempo em cada minibacia
-		ALLOCATE (Q2fl(NC))      !Vaz„o e velocidade calculada pelo modelo inercial em cada minibacia
-		ALLOCATE (Qmont(3))                 !Vaz„o a montante de uma determinada minibacia
+		ALLOCATE (Q2fl(NC))      !Vaz√£o e velocidade calculada pelo modelo inercial em cada minibacia
+		ALLOCATE (Qmont(3))                 !Vaz√£o a montante de uma determinada minibacia
 		ALLOCATE (Vol2(NC),Vol1(NC))        !Volumes no tempo t e t+1 em uma determinada minibacia
 		ALLOCATE (Area2(nc))
-		ALLOCATE (Hfl(NC),Yfl(NC))          !Profundidade e NÌvel de ·gua em cada minibacia
+		ALLOCATE (Hfl(NC),Yfl(NC))          !Profundidade e N√≠vel de √°gua em cada minibacia
 		ALLOCATE (nFACECAT1(NC),nFACECAT2(NC),nFACEY1(NC),nFACEY2(NC),nFACEDX(NC),Q2face(nC),Q2viz(nC))   !VARIAVEIS DA FACE
-		ALLOCATE (YRG(NUMHIDG,NT)) !HIDROGRAMAS PARA GRAVA«√O
-		ALLOCATE (HRG(NUMHIDG,NT)) !HIDROGRAMAS PARA GRAVA«√O
-		ALLOCATE (AFLRG(NUMHIDG,NT)) !HIDROGRAMAS PARA GRAVA«√O
+		ALLOCATE (YRG(NUMHIDG,NT)) !HIDROGRAMAS PARA GRAVA√á√ÉO
+		ALLOCATE (HRG(NUMHIDG,NT)) !HIDROGRAMAS PARA GRAVA√á√ÉO
+		ALLOCATE (AFLRG(NUMHIDG,NT)) !HIDROGRAMAS PARA GRAVA√á√ÉO
 		ALLOCATE (jtab(NC))
 		ALLOCATE (QRG_viz(NUMHIDG,NT)) !Hydrograph for recording
 		!FMF 09/09/2015 

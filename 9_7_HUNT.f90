@@ -57,7 +57,7 @@
 		end if
 	end do
 	
-	!InterpolaÁ„o do vetor yy entre os valores jlo e jlo+1 (para ¡rea)
+	!Interpola√ß√£o do vetor yy entre os valores jlo e jlo+1 (para √Årea)
 	if(jlo<n)then
 		incjlo = jlo + (1/(xx(jlo+1)-xx(jlo)))*(x-xx(jlo))
 		y = yy(jlo) + (yy(jlo+1)-yy(jlo))*(incjlo-jlo)
@@ -65,7 +65,7 @@
 		y = yy(jlo) + (yy(jlo)-yy(jlo-5))/(5) * (jlo)
 	endif
 	
-	!InterpolaÁ„o do vetor yy entre os valores jlo e jlo+1 (para NÌvel)
+	!Interpola√ß√£o do vetor yy entre os valores jlo e jlo+1 (para N√≠vel)
 	if(jlo<n)then
 		incjlo = jlo + (1/(xx(jlo+1)-xx(jlo)))*(x-xx(jlo))
 		z = zz(jlo) + (zz(jlo+1)-zz(jlo))*(incjlo-jlo)

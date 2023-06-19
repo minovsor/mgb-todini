@@ -16,7 +16,7 @@
 	INTEGER NTRECH,NTC                                                 !Sub-Rivers number / Number of intervals in a day
 	REAL C1,C2,C3 	                                                   !Muskingum-Cunge coefficients	
 	
-	!PROPORÇÕES DE ORIGEM
+	!PROPORÃ‡Ã•ES DE ORIGEM
 	REAL PMB1(NC+1),PMI1(NC+1),PMS1(NC+1)
 	REAL PJB1(NC),PJI1(NC),PJS1(NC)
 	
@@ -68,7 +68,7 @@
 			XXX=0.5*(1.0-(QREF(IC)/(BRIO(IC)*DECL(IC)*CEL(IC)*DX)))
 
 			! Verification of X and K values:
-			! Testa condição 0.2<=X<=0.5:
+			! Testa condiÃ§Ã£o 0.2<=X<=0.5:
 			if (XXX<0.2) then
 				XXX=0.2
 				AK=DTCAL/(3.125*XXX**1.25) !Eq 4.111 DO LIVRO DO TUCCI MODELOS
