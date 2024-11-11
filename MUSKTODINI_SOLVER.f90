@@ -191,6 +191,9 @@
                 
                 
             END DO
+
+     	    ! Storage !has to declare on musktodini_vars and initialize
+	    !SHAT_2(ITR+1,ITC+1) = (1. - DIFUSTAR_2)*DT/(2.*COURSTAR_2) * QC_2 + (1. + DIFUSTAR_2)*DT/(2.*COURSTAR_2) * QHAT
             
             ! Save streamflow
             QC(ITR+1,ITC+1) = QHAT
