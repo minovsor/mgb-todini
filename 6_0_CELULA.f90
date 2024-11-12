@@ -233,7 +233,7 @@
 			VINT(IC)=VINT(IC)+DINT*DTP
 			VSUP(IC)=VSUP(IC)+DSUP*DTP
 
-            TWS2(IC)=TWS2(IC)+(SI(IC,IU)+W(IC,IU))*(PUSO(IC,IU)/100.0) !VAS - GRACE
+            TWS2(IT,IC)=TWS2(IT,IC)+(SI(IC,IU)+W(IC,IU))*(PUSO(IC,IU)/100.0) !VAS - GRACE
             
         ENDDO !end HRU loop
 	  
@@ -325,7 +325,7 @@
 		! Evaporação using shortwave radiation available at terrestrial surface (usind input data)
 		E0SUP(iC)=1000.*SSUP/(MESP*CLATE)
 
-        TWS2(IC)=TWS2(IC)+(VBAS(IC)+VINT(IC)+VSUP(IC))/(ACEL(IC)*1000.0) ! VAS - GRACE
+        TWS2(IT,IC)=TWS2(IT,IC)+(VBAS(IC)+VINT(IC)+VSUP(IC))/(ACEL(IC)*1000.0) ! VAS - GRACE
         
 	ENDDO !End catchment loop
 
