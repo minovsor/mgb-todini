@@ -206,7 +206,7 @@
 	REAL,ALLOCATABLE:: TAMM(:,:),URMM(:,:),VVMM(:,:),PAMM(:,:)
 	REAL,ALLOCATABLE:: SOLMM(:,:)
 	REAL,ALLOCATABLE:: XYC(:,:)!x and y coordinates of climatological stations
-    real*8,allocatable::  TWS(:) !For comparison to GRACE data
+    real*8,allocatable::  TWS(:,:) !For comparison to GRACE data
     REAL,ALLOCATABLE:: TWS2(:)
     REAL,ALLOCATABLE:: STUDO(:,:) 
     
