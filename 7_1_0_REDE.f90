@@ -289,11 +289,6 @@
 		!STORE OUTPUT INFORMATION !FMF and PETER 10/08/2016
 		QTUDO(IC,IT)=QJ2(IC)
 
-	        !!MS: UPDATE TWS
-	        !IF(NSUBT(IC).GT.0) THEN
-	        !    TWS2(IC) = TWS2(IC) + 1000.*(VRB(IC) + VRI(IC) + VRS(IC))/(ACEL(IC)*1E6)
-	        !END IF  
-
 	ENDDO
 	RETURN
 	END
