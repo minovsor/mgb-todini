@@ -1,6 +1,6 @@
 
     
-	SUBROUTINE MUSKTODINI_SOLVER(QJX1,QJX2,NTRECH,NTC)
+    SUBROUTINE MUSKTODINI_SOLVER(QJX1,QJX2,NTRECH,NTC)
     !
     ! TODINI'S MUSKINGUM-CUNGE ROUTING
     !
@@ -18,10 +18,10 @@
     
 
     ! Variables and Parameters
-	USE VARS_MAIN
+    USE VARS_MAIN
     USE VARS_INERC
     USE MUSKTODINI_VARS
-	IMPLICIT NONE
+    IMPLICIT NONE
     
     ! Old Muskingum-Cunge variables
 	INTEGER ITC,ITR
@@ -35,10 +35,11 @@
     INTEGER :: NKMAX   !NUMERO DE ITERACOES
     INTEGER :: JTABAUX
     REAL(8) :: FINT
-    REAL(8) :: DEN,C1T,C2T,C3T
+    REAL(8) :: DEN,C1T,C2T,C3T,C4T
     REAL(8) :: DQ
     REAL(8) :: DXC,RDTDX, DIFAUX, RCOUR
     REAL(8) :: QI, QD_1, QC_2, QC_1
+	REAL(8) :: QL, QL_1, QL_2
     REAL(8) :: QREF_1, QREF_2, YREF_1, YREF_2
     REAL(8) :: QHAT, QHAT_OLD, ERRQHAT    
     REAL(8) :: JTAB1, JTAB2, QDQ_1A, QDQ_1B, QDQ_2A,QDQ_2B
@@ -167,11 +168,20 @@
                 C1T = (-1.+COURSTAR_2 + DIFUSTAR_2)/DEN
                 C2T = ((1.+COURSTAR_1 - DIFUSTAR_1)/DEN) * RCOUR
                 C3T = ((1.-COURSTAR_1 + DIFUSTAR_1)/DEN) * RCOUR
-                !TODO: CORRIGIR ->DAR MAIS UMA OLHADA
+
+				! LATERAL FLOW
+				!C4T = 0.
+				!QL = 0.
+				!C4T = 2.*COURSTAR_2/DEN
+				!QL_1 = QLAT(ITC)
+				!QL_2 = QLAT(ITC+1)
+				!QL = 0.5*(QL_2 + QL_1)
+				! TODO: SET QLAT OUTSIDE AND SUB ROUTINE ARGS, FLOW CAN BE OUTSIDE THE LOOP
+				
                 
                 ! New estimate
                 !QHAT = C1T*QC_1 + C2T*QC_2+ C3T*QD_1
-                QHAT = C1T*QC_2 + C2T*QC_1+ C3T*QD_1
+                QHAT = C1T*QC_2 + C2T*QC_1 + C3T*QD_1 + C4T*QL
                 
                 ! Suaviza com estimativa anterior
                 QHAT = 0.5*(QHAT+QHAT_OLD)
@@ -192,8 +202,8 @@
                 
             END DO
 
-     	    ! Storage !has to declare on musktodini_vars and initialize
-	    !SHAT_2(ITR+1,ITC+1) = (1. - DIFUSTAR_2)*DT/(2.*COURSTAR_2) * QC_2 + (1. + DIFUSTAR_2)*DT/(2.*COURSTAR_2) * QHAT
+     	    ! Storage !TODO: has to declare on musktodini_vars and initialize
+	   		!SHAT_2(ITR+1,ITC+1) = (1. - DIFUSTAR_2)*DT/(2.*COURSTAR_2) * QC_2 + (1. + DIFUSTAR_2)*DT/(2.*COURSTAR_2) * QHAT
             
             ! Save streamflow
             QC(ITR+1,ITC+1) = QHAT
