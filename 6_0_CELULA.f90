@@ -113,7 +113,7 @@
     ! day of the year for the radiation routine
     JDIA=JDIA-JULDAY(1,1,IANO)+1
 
-    TWS2 = 0.0
+!TWS2 = 0.0
     DINFILT = 0.0
 
 	! Catchments loop
@@ -129,6 +129,7 @@
 		
         ! Initializes Evaptudo
         EVAPTUDO(IC,IT)=0.0
+	TWS2(IT,IC) = 0.0
         
 		! URH (GRU) Loop
 		DO IU=1,NU
