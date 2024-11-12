@@ -101,8 +101,8 @@
 		ALLOCATE (PAMM(NCLI,12),SOLMM(NCLI,12))
 		ALLOCATE (PMB(NB)) !Average rainfall at each sub-basin
 		ALLOCATE (KPM(NB)) !Auxiliar variable
-        ALLOCATE (TWS(NC))
-        allocate(TWS2(NC))
+        ALLOCATE (TWS(NT,NC))
+        allocate(TWS2(NT,NC))
         allocate(studo(nc, nt))
 		
 		!if (flagaclimed/=0) then !#MV When using CRU file of South America (or not use time serie), do not allocate!
