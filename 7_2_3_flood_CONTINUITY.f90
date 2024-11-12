@@ -142,7 +142,7 @@
             !Writes TWS for GRACE comparison
             if (tflood/dtflood0==1) then          
                
-                TWS2(IC)=TWS2(IC)+real(Vol2(IC)/dble(ACEL(IC)*1000.0))
+                TWS2(IT,IC)=TWS2(IT,IC)+real(Vol2(IC)/dble(ACEL(IC)*1000.0))
                 
             end if
             
