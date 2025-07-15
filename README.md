@@ -1,2 +1,2 @@
 # mgb-todini
-MGB 2020 + método Todini (experimental)
+MGB 2020 + Todini's routing (experimental code)
